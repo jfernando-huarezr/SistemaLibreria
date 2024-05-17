@@ -9,7 +9,7 @@
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Mi Libreria</title>
+    <%@ include file="/partials/head.jsp" %>
 </head>
 <body>
     <h1>Gestion de Productos</h1>

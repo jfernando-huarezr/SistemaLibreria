@@ -6,7 +6,7 @@ Tecnologías: Java EE, Tomcat 9, Servlets, Maven, POM
 
 Para conectar la base de datos, se debe crear un documento 'config.properties' dentro de la carpeta 'resources' del main con los siguientes datos:
 
-database.url=jdbc:sqlserver://tudireccionbasededatos:tupuerto
-database.name=nombreBD
-database.user=usuarioBD
-database.password=passwordUsuario
+- database.url=jdbc:sqlserver://tudireccionbasededatos:tupuerto
+- database.name=nombreBD
+- database.user=usuarioBD
+- database.password=passwordUsuario

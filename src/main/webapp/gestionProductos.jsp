@@ -14,16 +14,12 @@
 <body>
     <h1>Gestion de Productos</h1>
     <p>Criterios de Busqueda</p>
-    <br>
-    <br>
     <form action="producto" method="GET">
         <input type="hidden" name="opcionGET" value="buscarProducto"/>
 
         <label for="nombre">Nombre: </label>
         <input id="nombre" type="text" name="nombre"/><button>Buscar</button>
     </form>
-
-    <br>
     <br>
     <table>
         <tr>
@@ -39,12 +35,11 @@
                 <td>${producto.nombre}</td>
                 <td>${producto.tipo}</td>
                 <td>S/.${producto.precio}</td>
-                <td><a href="producto?opcionGET=mostrarEditarProducto&idProducto=${producto.id}">Editar</a> <a href="producto?opcionGET=eliminarProducto&idProducto=${producto.id}"> Eliminar</a><td>
+                <td class="acciones"><a href="producto?opcionGET=mostrarEditarProducto&idProducto=${producto.id}">Editar</a> <a href="producto?opcionGET=eliminarProducto&idProducto=${producto.id}"> Eliminar</a><td>
             </tr>
         </c:forEach>
     </table>
-    <br>
-    <br>
+
     <form action="producto" method="POST">
         <input type="hidden" value="mostrarNuevoProducto" name="opcionPOST"/>
         <button>Nuevo</button>

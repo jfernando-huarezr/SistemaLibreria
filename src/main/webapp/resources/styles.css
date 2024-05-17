@@ -5,3 +5,17 @@ th, td {
 th {
     background-color: lightgreen;
 }
+
+form * {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 5px 20px;
+}
+
+.acciones>a {
+    padding: 0 20px;
+}

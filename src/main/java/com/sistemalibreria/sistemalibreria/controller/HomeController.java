@@ -16,13 +16,18 @@ public class HomeController extends HttpServlet {
                 mostrarGestionProductos(request, response);
                 break;
             }
+            case "mostrarGestionJefeTienda" : {
+                mostrarGestionJefeTienda(request, response);
+                break;
+            }
         }
 
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    private void mostrarGestionJefeTienda(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String paginaDestino = "/gestionJefeTienda.jsp";
+        RequestDispatcher dispatcher = request.getRequestDispatcher(paginaDestino);
+        dispatcher.forward(request, response);
     }
 
     private void mostrarGestionProductos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -30,4 +35,11 @@ public class HomeController extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher(paginaDestino);
         dispatcher.forward(request, response);
     }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+
+
 }

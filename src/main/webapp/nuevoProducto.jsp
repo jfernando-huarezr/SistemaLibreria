@@ -15,13 +15,13 @@
         <input type="hidden" value="grabarProducto" name="opcionPOST"/>
 
         <label for="nombre">Nombre: </label>
-        <input type="text" id="nombre" name="nombre" value="${producto.nombre}"/>
+        <input type="text" id="nombre" name="nombre"/>
 
         <label for="tipo">Tipo: </label>
-        <input type="text" id="tipo" name="tipo" value="${producto.tipo}"/>
+        <input type="text" id="tipo" name="tipo"/>
 
         <label for="precio">Precio: </label>
-        <input type="number" id="precio" name="precio" value="${producto.precio}"/>
+        <input type="number" id="precio" name="precio"/>
 
 
         <button>Grabar</button>

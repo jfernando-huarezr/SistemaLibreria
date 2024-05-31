@@ -62,8 +62,8 @@ public class ProductoController extends HttpServlet {
 
         request.setAttribute("producto", producto);
         String paginaDestino = "/editarProducto.jsp";
-        RequestDispatcher view = request.getRequestDispatcher(paginaDestino);
-        view.forward(request, response);
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(paginaDestino);
+        dispatcher.forward(request, response);
     }
 
     private void buscarProducto(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
@@ -73,7 +73,7 @@ public class ProductoController extends HttpServlet {
 
         request.setAttribute("listaProductos", listaProductos);
         String paginaDestino = "/gestionProductos.jsp";
-        RequestDispatcher dispatcher = request.getRequestDispatcher(paginaDestino);
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(paginaDestino);
         dispatcher.forward(request, response);
     }
 
@@ -118,7 +118,7 @@ public class ProductoController extends HttpServlet {
         productoDAO.editarProducto(nombre, tipo, precio, estado, id);
 
         String paginaDestino = "/gestionProductos.jsp";
-        RequestDispatcher dispatcher = request.getRequestDispatcher(paginaDestino);
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(paginaDestino);
         dispatcher.forward(request, response);
     }
 
@@ -130,14 +130,14 @@ public class ProductoController extends HttpServlet {
         ProductoDAO productoDAO = new ProductoDAO();
         productoDAO.grabarProducto(nombre, tipo, precio);
 
-        String paginaDestiono = "/gestionProductos.jsp";
-        RequestDispatcher dispatcher = request.getRequestDispatcher(paginaDestiono);
+        String paginaDestino = "/gestionProductos.jsp";
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(paginaDestino);
         dispatcher.forward(request, response);
     }
 
     private void mostrarNuevoProducto(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String paginaDestino = "/nuevoProducto.jsp";
-        RequestDispatcher dispatcher = request.getRequestDispatcher(paginaDestino);
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(paginaDestino);
         dispatcher.forward(request, response);
     }
 }
